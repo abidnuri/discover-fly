@@ -113,11 +113,29 @@
         <script>
             const increaseBtn = document.getElementById('increase-button');
             increaseBtn.addEventListener('click', function(){
+                // const ticketCount = document.getElementById('ticket-number');
+                // const ticketCountNumber = parseInt(ticketCount.value);
+                // const ticketNumber = ticketCountNumber + 1;
+                // ticketCount.value = ticketNumber;
+                increaseDecrease(true);
+            })
+            const decreaseBtn = document.getElementById('decrease-button');
+            decreaseBtn.addEventListener('click', function(){
+                increaseDecrease(false);
+            })
+            
+            function increaseDecrease(isIncrease){
                 const ticketCount = document.getElementById('ticket-number');
                 const ticketCountNumber = parseInt(ticketCount.value);
-                const ticketNumber = ticketCountNumber + 1;
+                // const ticketNumber = ticketCountNumber + 1;
+                if(isIncrease == true){
+                    ticketNumber = ticketCountNumber + 1;
+                }
+                else if(isIncrease == false && ticketCountNumber > 0 ){
+                    ticketNumber = ticketCountNumber - 1;
+                }
                 ticketCount.value = ticketNumber;
-            })
+            }
         </script>
 </body>
 
