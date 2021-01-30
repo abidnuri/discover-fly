@@ -112,8 +112,9 @@
     </main>
     <section id="successful-part">
         <h1>You Have Successfully Booked Your Ticket.</h1>
+        <h2>You have charged: <span id="show-total">$00</span></h2>
         <h2>Thank You.</h2>
-        <h4>Want To Book Another Ticket</h4>
+        <h4>Want To Book Another Ticket?</h4>
         <a href="index.html"> &#60 &#60 Go back </a>
     </section>
 
@@ -168,6 +169,7 @@
             //Grand Total Calculation
             const grandTotal = subTotal + taxAmount;
             document.getElementById('grand-total').innerText = '$' + grandTotal;
+            document.getElementById('show-total').innerText = '$' + grandTotal;
         }
         //hide and successful page load
         const mainForm = document.getElementById('book-success');
