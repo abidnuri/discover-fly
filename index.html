@@ -112,6 +112,7 @@
     </main>
     <section id="successful-part">
         <h1>You Have Successfully Booked Your Ticket.</h1>
+        <h3>You booked: &nbsp<span id="ticket-booked">0</span>&nbspTicket</h3>
         <h2>You have charged: <span id="show-total">$00</span></h2>
         <h2>Thank You.</h2>
         <h4>Want To Book Another Ticket?</h4>
@@ -160,6 +161,9 @@
 
             const ticketInput2 = document.getElementById('economyClass-ticket-number');
             const ticketTotal2 = parseInt(ticketInput2.value);
+            // Total ticket alert
+            const ticketBooked = ticketTotal + ticketTotal2;
+            document.getElementById('ticket-booked').innerText = ticketBooked;
             // Sub Total Calculation
             const subTotal = ticketTotal * 150 + ticketTotal2 * 100;
             document.getElementById('sub-total').innerText = '$' + subTotal;

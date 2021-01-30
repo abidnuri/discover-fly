@@ -143,6 +143,7 @@ a.active {
 #successful-part a {
   color: white;
 }
-#show-total {
+#show-total,
+#ticket-booked {
   color: tomato;
 }
