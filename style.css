@@ -135,4 +135,9 @@ nav ul li a:hover, a.active{
     color: #fff;
     text-align: center;
     box-shadow: 10px 10px 30px gray;
+    line-height: 2;
+}
+#successful-part a{
+    color: white;
+
 }
