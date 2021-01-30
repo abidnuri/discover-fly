@@ -12,6 +12,7 @@ body{
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    height: 100vh;
 }
 
 nav{
@@ -126,4 +127,12 @@ nav ul li a:hover, a.active{
     font-size: 25px;
     color: #3352F2;
     background-color: #fff;
+}
+#successful-part {
+    display: none;
+    margin: 40px;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 10px 10px 30px gray;
 }
