@@ -62,11 +62,11 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="ticket-number" class="inp-style inp-width" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <!-- <button id="increase-button" class="plus">+</button>
-                    <button id="decrease-button" class="minus">-</button> -->
+                    <button id="increase-button" class="plus">+</button>
+                    <button id="decrease-button" class="minus">-</button>
                 </div>
             </div>
             <div class="calculations">
@@ -111,22 +111,10 @@
         <!--Thank You-->
 
         <script>
-            const increaseBtn = document.getElementById('increase-button');
-            increaseBtn.addEventListener('click', function(){
-                // const ticketCount = document.getElementById('ticket-number');
-                // const ticketCountNumber = parseInt(ticketCount.value);
-                // const ticketNumber = ticketCountNumber + 1;
-                // ticketCount.value = ticketNumber;
-                increaseDecrease(true);
-            })
-            const decreaseBtn = document.getElementById('decrease-button');
-            decreaseBtn.addEventListener('click', function(){
-                increaseDecrease(false);
-            })
-            
+            //is increase or decrease function
             function increaseDecrease(isIncrease){
                 const ticketCount = document.getElementById('ticket-number');
-                const ticketCountNumber = parseInt(ticketCount.value);
+                let ticketCountNumber = parseInt(ticketCount.value);
                 // const ticketNumber = ticketCountNumber + 1;
                 if(isIncrease == true){
                     ticketNumber = ticketCountNumber + 1;
@@ -136,6 +124,14 @@
                 }
                 ticketCount.value = ticketNumber;
             }
+            const increaseBtn = document.getElementById('increase-button');
+            increaseBtn.addEventListener('click', function(){
+                increaseDecrease(true);
+            })
+            const decreaseBtn = document.getElementById('decrease-button');
+            decreaseBtn.addEventListener('click', function(){
+                increaseDecrease(false);
+            })
         </script>
 </body>
 
